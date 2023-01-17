@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/codebridge-test/static/css/main.119e85a7.css",
+    "main.js": "/codebridge-test/static/js/main.9b4f7be9.js",
+    "index.html": "/codebridge-test/index.html",
+    "main.119e85a7.css.map": "/codebridge-test/static/css/main.119e85a7.css.map",
+    "main.9b4f7be9.js.map": "/codebridge-test/static/js/main.9b4f7be9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.119e85a7.css",
+    "static/js/main.9b4f7be9.js"
+  ]
+}

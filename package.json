@@ -1,6 +1,6 @@
 {
-  "homepage": "https://samandy90.github.io/codebridge-test/",
-  "name": "codebridge-test-app",
+  "homepage": "https://samandy90.github.io/codebridge/",
+  "name": "codebridge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -93,7 +93,7 @@ export function HomePage() {
             {filteredArticles.map((i) => {
                 return (
                   <Grid item xs={4} key={i.id}>
-                    <Link to={"/article/"} >
+                    <Link to={"/codebridge-test-app/article/"} >
                     <ArticleCard
                       imageSrc={i.imageUrl}
                       title={

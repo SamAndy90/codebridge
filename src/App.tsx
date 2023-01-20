@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/codebridge/" element={<HomePage />} />
-          <Route path="/codebridge/article/" element={<ArticlePage  />} />
+          <Route path="/codebridge/article/:id" element={<ArticlePage />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { ArticleCard } from "./Blog";
-import { SearchResults } from "./search-results";
+import { SearchResults } from "./Blog/search-results";
 import { Link } from "react-router-dom";
 
 import { getHighlightedText } from "helpers/search";
@@ -24,6 +24,7 @@ interface ArticleData {
   title: string;
   summary: string;
   imageUrl: string;
+  publishedAt: string;
 }
 
 export function HomePage() {
@@ -34,8 +35,7 @@ export function HomePage() {
       "https://api.spaceflightnewsapi.net/v3/articles"
     );
     return res.data;
-  });
-  
+  });  
 
   const filteredArticles = getArticles.isSuccess
     ? getArticles.data.filter(
@@ -48,7 +48,7 @@ export function HomePage() {
   const searchId = filteredArticles.length;
   
   return (
-    <Container>
+    <Container sx={{ marginTop: 6 }} >
       <Stack spacing={4}>
         <Stack alignItems={"start"}>
           <Stack maxWidth={600} width={"100%"} spacing={1}>
@@ -89,21 +89,22 @@ export function HomePage() {
         {getArticles.isError && <Alert severity="error">Some error</Alert>}
 
         <Box>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} pb={8} >
             {filteredArticles.map((i) => {
                 return (
-                  <Grid item xs={4} key={i.id}>
-                    <Link to={"/codebridge/article/"} >
+                  <Grid item xs={12} sm={6} lg={4} key={i.id} >
+                    <Link to={`/codebridge/article/${i.id}`} >
                     <ArticleCard
                       imageSrc={i.imageUrl}
+                      publishedAt={i.publishedAt}
                       title={
                         <Typography variant={"h4"}
                                     component={"h2"}
                                     sx={{
                                       fontFamily: 'Montserrat',
-                                      fontSize: 24+'px',
+                                      fontSize: '24px',
                                       fontWeight: 400,
-                                      maxHeight: 58+'px',
+                                      maxHeight: '58px',
                                       overflow: 'hidden',
                                     }} >
                           {getHighlightedText(i.title, searchQuery)}
@@ -112,9 +113,9 @@ export function HomePage() {
                       description={
                         <Typography sx={{
                                       fontFamily: 'Montserrat',
-                                      fontSize: 16+'px',
+                                      fontSize: '16px',
                                       fontWeight: 400,
-                                      maxHeight: 96+'px',
+                                      maxHeight: '96px',
                                       overflow: 'hidden',
                                       flex: 'auto',
                                     }} >
@@ -125,7 +126,7 @@ export function HomePage() {
                   </Grid>
                 )
             })}
-
+            
             {filteredArticles.length === 0 && <p>Nothing here</p>}
           </Grid>
         </Box>

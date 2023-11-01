@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/codebridge/static/css/main.ab4d256f.css",
-    "main.js": "/codebridge/static/js/main.d7fdd891.js",
+    "main.js": "/codebridge/static/js/main.ed7870ee.js",
     "index.html": "/codebridge/index.html",
     "main.ab4d256f.css.map": "/codebridge/static/css/main.ab4d256f.css.map",
-    "main.d7fdd891.js.map": "/codebridge/static/js/main.d7fdd891.js.map"
+    "main.ed7870ee.js.map": "/codebridge/static/js/main.ed7870ee.js.map"
   },
   "entrypoints": [
     "static/css/main.ab4d256f.css",
-    "static/js/main.d7fdd891.js"
+    "static/js/main.ed7870ee.js"
   ]
 }

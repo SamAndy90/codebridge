@@ -1,10 +1,10 @@
 import { Paper } from "@mui/material";
 
-interface IsearchResults {
+interface ISearchResults {
     searchId: number
 }
 
-export const SearchResults = (props: IsearchResults) => {
+export const SearchResults = (props: ISearchResults) => {
     const { searchId } = props;
     return (
         <Paper elevation={1} sx={{ padding: '5px'}} >

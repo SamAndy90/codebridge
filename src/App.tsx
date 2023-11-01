@@ -11,7 +11,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/codebridge/" element={<HomePage />} />
+          <Route path="/codebridge" element={<HomePage />} />
           <Route path="/codebridge/article/:id" element={<ArticlePage />} />
         </Routes>
       </BrowserRouter>
